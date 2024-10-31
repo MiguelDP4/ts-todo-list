@@ -15,7 +15,6 @@ type Project = {
 }
 
 const sevenDaysFromNow: Date = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
-let selectedProjectId: number = 1;
 let selectedProjectIndex: number = 0;
 const projects: Array<Project> = [
   {
@@ -42,7 +41,6 @@ const updateProjectsListDisplay = () => {
       const newLi = document.createElement('li');
       newLi.innerHTML = `Project ${project.id}`
       newLi.addEventListener('click', () => {
-        selectedProjectId = project.id;
         selectedProjectIndex = project.id - 1;
         updateProjectDisplay();
       });
@@ -152,7 +150,6 @@ const clearButton = document.getElementById('clear-button');
 if(clearButton) clearButton.addEventListener('click', () => {
   projects.splice(0,projects.length);
   selectedProjectIndex = 0;
-  selectedProjectId = 1;
   updateProjectsListDisplay();
   if(projectDisplay) projectDisplay.innerHTML=`<h3>Create and select a project</h3>`
 })
