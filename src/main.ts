@@ -73,7 +73,6 @@ const updateProjectsListDisplay = () => {
   const projectsListDisplay = document.getElementById('projects');
   if(projectsListDisplay) {
     projectsListDisplay.innerHTML = '';
-    console.log(projects);
     projects.forEach((project) => {
       const newLi = document.createElement('li');
       newLi.id = `project-${project.id}`;
