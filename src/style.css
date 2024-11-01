@@ -90,13 +90,34 @@ nav .clear-button {
       list-style-type: none;
       padding: 0;
       li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         margin-top: 4px;
-        padding: 12px 8px;
+        padding: 0 8px;
         background-color:#afafff;
         border-left: solid 2px #2f2fc9;
         &:hover {
           background-color:#8e8efd;
           cursor: pointer;
+        }
+        span {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          padding-right: 110px;
+        }
+        button {
+          cursor: pointer;
+          background-color: transparent;
+          border: none;
+          margin-top: auto;
+          text-align: right;
+          padding-top: 11.5px;
+          padding-bottom: 11.5px;
+          img {
+            width: 16px;
+            height: 16px;
+          }
         }
       }
     }
@@ -139,7 +160,7 @@ nav .clear-button {
       display: flex;
       flex-wrap: wrap;
       .task {
-        transition: background-color 200ms;
+        transition: background-color 200ms, width 100ms, height 100ms;
         background-color:#dedede;
         box-shadow: #949393 2px 2px 9px;
         width: 192px;
@@ -147,6 +168,21 @@ nav .clear-button {
         margin-left: 24px;
         margin-top: 24px;
         padding: 16px;
+        display: flex;
+        flex-direction: column;
+
+        .edit-button {
+          cursor: pointer;
+          background-color: transparent;
+          border: none;
+          margin-top: auto;
+          text-align: right;
+          img {
+            width: 16px;
+            height: 16px;
+          }
+        }
+
         .task-header {
           display: flex;
           justify-content: space-between;
@@ -169,3 +205,62 @@ nav .clear-button {
   }
 }
 
+.modal-container {
+  background-color: #000000aa;
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  .modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    box-shadow: #00000080 3px 3px 6px;
+    top: 50%;
+    right: 50%;
+    width: 500px;
+    height: 500px;
+    transform: translate(50%, -50%);
+    background-color: #dedede;
+    &.project {
+      height: 180px;
+    }
+    input {
+      height: 44px;
+      width: 80%;
+      margin-top: 12px;
+    }
+    textarea {
+      height: 310px;
+      width: 80%;
+      margin-top: 12px;
+    }
+
+    .button-container {
+      display: flex;
+      margin-top: auto;
+      margin-bottom: 24px;
+      justify-content: center;
+
+      button {
+        margin-left: 12px;
+        background-color: #343a40;
+        color: #dedede;
+        cursor: pointer;
+        border: none;
+        border-radius: 9999px;
+        padding: 8px 24px;
+        &:hover {
+          background-color: #bbbbbb;
+        }
+        &:active {
+          background-color: #949393;
+        }
+      }
+    }
+  }
+}
