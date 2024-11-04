@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/todo.svg" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick To-Do</title>
+  </head>
+  <body>
+    <div id="app">
+      <nav>
+        <span>Quick To-Do</span>
+        <button id="clear-button" class="clear-button">Clear</button>
+      </nav>
+      <div class="content">
+        <aside>
+          <button id="new-project" class="new-project">+ New Project</button>
+          <ul class="projects" id="projects"></ul>
+        </aside>
+        <section id="project-display">
+        </section>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
