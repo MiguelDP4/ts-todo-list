@@ -6,5 +6,6 @@ The user can create projects, which themselves can have tasks. The user can chan
 
 
 
-https://github.com/user-attachments/assets/61312214-1d1a-40bb-baa1-da87f5dfe5cb
+
+https://github.com/user-attachments/assets/23d05495-dc72-4050-865d-bafcdfeb23b2
 
